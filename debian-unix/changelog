@@ -1,0 +1,5 @@
+pymssql (2.1.5-0) any; urgency=medium
+
+  * New-style debian pytools packaging for clazzes.org
+
+ -- Wolfgang Glas <wolfgang.glas@iteg.at>  Sun, 14 Feb 2021 22:32:53 +0100
