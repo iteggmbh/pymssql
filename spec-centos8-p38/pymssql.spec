@@ -10,7 +10,6 @@ Release: 0
 License: Apache License 2.0
 Group: Development/Libraries
 Source: pymssql-%{version}.tar.gz
-BuildArch: noarch
 BuildRequires: gcc
 BuildRequires: git
 BuildRequires: freetds-devel
@@ -24,7 +23,6 @@ BuildRoot: /var/tmp/%{name}-buildroot
 ###XBCS-PBA-Distributions: centos8
 ###XBCS-PBA-Repository: rpm.clazzes.org
 ###XBCS-PBA-Build-Source-pba: http://rpm.clazzes.org/repos/pba-1.0/pba-1.0.repo
-###XBCS-PBA-Build-Source-epel: http://rpm.clazzes.org/repos/epel/epel.repo
 # epel-release should be installed in all centos8 tarballs
 # based on
 #   https://fedoraproject.org/wiki/Packaging:Python
@@ -57,9 +55,6 @@ Summary: %{sum}
 %files -n python%{python3_pkgversion}-%{srcname}
 %license LICENSE
 %doc README.rst
-%{python3_sitelib}/*
-#%{python38_sitelib}/%{srcname}/
-#%{python38_sitelib}/%{srcname}-*.egg-info/
-#%{_bindir}/sample-exec
+%{python3_sitearch}/*
 
 %changelog
